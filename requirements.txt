@@ -1,0 +1,11 @@
+streamlit>=1.45,<2
+beautifulsoup4>=4.13,<5
+Pillow>=11,<13
+reportlab>=4.2,<5
+pyspellchecker>=0.8,<1
+playwright>=1.48,<2
+graphviz>=0.20,<1
+certifi>=2024.8.30
+openai>=1.66.0,<3.0.0
+openai
+python-dotenv
