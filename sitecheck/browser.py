@@ -137,4 +137,4 @@ def inspect_browser(scan,options,client,artifact_dir,progress=None):
             getattr(progress, "work", lambda *args: None)("browser", browser_index+1, len(urls[:10]))
         context.close()
         browser.close()
-    scan.notes.append("Browser results use a constrained, read-only session. Network timings are affected by interception and must not be treated as Core Web Vitals.")
+    scan.notes.append("Browser results use a constrained, read only session. Network timings are affected by interception and must not be treated as Core Web Vitals.")

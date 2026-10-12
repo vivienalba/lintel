@@ -107,7 +107,7 @@ def test_desktop_reference_ui_and_ai_workflow(browser_ui):
     assert page.locator('.ai-summary script').count() == 0
     expect(page.locator('.ai-summary')).to_contain_text('<script>untrusted()</script>')
     page.get_by_role('button', name='ASK LINTEL').click()
-    expect(page.get_by_role('dialog', name='Ask Lintel.')).to_be_visible()
+    expect(page.get_by_role('dialog', name='Ask Lintel')).to_be_visible()
     expect(page.get_by_role('button', name='SEND', exact=True)).to_be_disabled()
     page.locator('#ai-chat-consent').check()
     expect(page.locator('#ai-chat-consent')).to_be_focused()
@@ -118,7 +118,7 @@ def test_desktop_reference_ui_and_ai_workflow(browser_ui):
     no_overflow(page)
     capture(page, 'desktop-ai-review-chat.png')
     page.get_by_role('textbox', name='Ask about the selected website').press('Escape')
-    expect(page.get_by_role('dialog', name='Ask Lintel.')).to_be_hidden()
+    expect(page.get_by_role('dialog', name='Ask Lintel')).to_be_hidden()
     assert errors == []
 
 
@@ -141,7 +141,7 @@ def test_mobile_navigation_finding_help_and_side_chat(browser_ui):
     page.get_by_role('button', name='EXPLAIN WITH AI').click()
     expect(page.locator('.ai-issue-output')).to_contain_text('Explain the existing findings.')
     page.get_by_role('button', name='ASK LINTEL').click()
-    expect(page.get_by_role('dialog', name='Ask Lintel.')).to_be_visible()
+    expect(page.get_by_role('dialog', name='Ask Lintel')).to_be_visible()
     no_overflow(page)
     bounds = page.locator('.ai-chat-panel').bounding_box()
     assert bounds['x'] >= 0 and bounds['x'] + bounds['width'] <= 390

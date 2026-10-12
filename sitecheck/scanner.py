@@ -315,5 +315,5 @@ def run_scan(url, options=None, progress=None, client=None, artifact_dir=None):
         work("browser", 1, 1)
     work("preparing", 0, 1)
     scan.finished = now()
-    scan.notes.append(f"Read-only scan. {net.count} HTTP requests used. No login, purchase, form submission, email or phone call performed.")
+    scan.notes.append(f"Read only scan. {net.count} HTTP requests used. No login, purchase, form submission, email or phone call performed.")
     return scan

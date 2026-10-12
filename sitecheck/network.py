@@ -1,4 +1,4 @@
-"""Bounded read-only HTTP client. Resolve and pin public IPs for every hop.
+"""Bounded read only HTTP client. Resolve and pin public IPs for every hop.
 
 The browser adapter also uses this transport. No private-network escape flag.
 Tests use a fake transport; live scans always enforce public addresses.
